@@ -1,0 +1,29 @@
+<project name= "APP_Test" basedir= "." >
+
+    <property name= "lib.dir" value= "lib" />
+
+    <path id= "E:\javatestxin\APP_Test\src\test\java\com\cmcc\p\poc\automation\test\SetUp.java" >
+
+         <!-- adding the saxon jar to your classpath -->
+
+        <fileset dir= "${lib.dir}" includes= "*.jar" />
+
+    </path>
+
+    <target name= "transform" >
+
+        <xslt in= "E:\javatestxin\APP_Test\test-output\testng-results.xml" style= "E:\javatestxin\APP_Test\test-output\testng-results.xsl"
+
+  out= "E:\javatestxin\APP_Test\test-output\index1.html " >
+
+             <!-- you need to specify the directory here again -->
+
+            <param name= "testNgXslt.outputDir" expression= "E:\javatestxin\APP_Test\test-output" />
+
+            <classpath refid= "E:\javatestxin\APP_Test\src\test\java\com\cmcc\p\poc\automation\test\SetUp.java" />
+
+        </xslt>
+
+    </target>
+
+</project>

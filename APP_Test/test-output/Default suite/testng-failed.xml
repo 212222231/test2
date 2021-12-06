@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.cmcc.p.poc.automation.test.SetUp">
+        <methods>
+          <include name="tearDwon"/>
+          <include name="createAppiumServer"/>
+          <include name="test"/>
+          <include name="setUp"/>
+          <include name="tearDownAfter"/>
+        </methods>
+      </class> <!-- com.cmcc.p.poc.automation.test.SetUp -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

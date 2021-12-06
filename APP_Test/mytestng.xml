@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="automation" parallel="Automatically generate xml" thread-count="1">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="127.0.0.1" thread-count="1">
+        <classes>
+       	 
+       	 <!--
+       	 <class name="com.cmcc.p.poc.automation.test.ShareLocation"/>	
+         <class name="com.cmcc.p.poc.automation.test.SetUp"/>
+        
+           -->
+          	<class name="com.cmcc.p.poc.automation.test.AddAndRemoveMember"/>
+            <class name="com.cmcc.p.poc.automation.test.Addfriend"/>
+            <class name="com.cmcc.p.poc.automation.test.Callfriend"/>
+            <class name="com.cmcc.p.poc.automation.test.Callonefriend"/>
+            <class name="com.cmcc.p.poc.automation.test.FriendmoduleFlowTest"/>
+            <class name="com.cmcc.p.poc.automation.test.Group_my_nick_name_tip"/>
+            <class name="com.cmcc.p.poc.automation.test.Group_notice"/>
+            <class name="com.cmcc.p.poc.automation.test.Group_transfer_container"/>
+            <class name="com.cmcc.p.poc.automation.test.GroupAction"/>
+            <class name="com.cmcc.p.poc.automation.test.Groupfriend"/>
+            <class name="com.cmcc.p.poc.automation.test.GroupNeedcheck"/>
+            <class name="com.cmcc.p.poc.automation.test.GroupNotallow"/>
+            <class name="com.cmcc.p.poc.automation.test.GroupUndisturbed"/>
+            <class name="com.cmcc.p.poc.automation.test.HistotyTest"/>
+            <class name="com.cmcc.p.poc.automation.test.JoinAndExitGroup"/>
+            <class name="com.cmcc.p.poc.automation.test.LoginAndSpeak"/>
+            <class name="com.cmcc.p.poc.automation.test.LoginTest"/>
+            <class name="com.cmcc.p.poc.automation.test.ManageGroup"/>
+            <class name="com.cmcc.p.poc.automation.test.Member_location"/>
+            <class name="com.cmcc.p.poc.automation.test.Messfriend"/>
+            <class name="com.cmcc.p.poc.automation.test.PersonalInfo"/>
+            <class name="com.cmcc.p.poc.automation.test.Redpointfriend"/>
+            <class name="com.cmcc.p.poc.automation.test.Searchfriendhavefriend"/>
+            <class name="com.cmcc.p.poc.automation.test.SearchfriendNofriend"/>
+            <class name="com.cmcc.p.poc.automation.test.Set_manager_member"/>
+            <class name="com.cmcc.p.poc.automation.test.Set_manager_no_member"/>
+            <class name="com.cmcc.p.poc.automation.test.Set_notes"/>
+            <class name="com.cmcc.p.poc.automation.test.SetUp"/>
+            <class name="com.cmcc.p.poc.automation.test.ShareLocation"/>
+            <class name="com.cmcc.p.poc.automation.test.SpeakAndPlay"/>
+            <class name="com.cmcc.p.poc.automation.test.TopGroup"/>
+            <class name="com.cmcc.p.poc.automation.test.Updatefriendfail"/>
+            <class name="com.cmcc.p.poc.automation.test.Updatefriendname"/>  
+             
+        </classes>
+    </test>
+</suite>

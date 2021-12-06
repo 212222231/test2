@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="127.0.0.1"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="322.719">
+  <properties />
+  
+  
+            <testcase name="getFirst" time="0.000" classname="com.cmcc.p.poc.automation.test.Searchfriendhavefriend" />
+                <testcase name="getsecond" time="0.000" classname="com.cmcc.p.poc.automation.test.Searchfriendhavefriend" />
+                <testcase name="test" time="322.719" classname="com.cmcc.p.poc.automation.test.Searchfriendhavefriend" />
+      
+</testsuite>

@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 83, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 7,378.271 s <<< FAILURE! - in TestSuite
+test(com.cmcc.p.poc.automation.test.GroupNotallow)  Time elapsed: 144.45 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.cmcc.p.poc.automation.test.GroupNotallow.test(GroupNotallow.java:41)
+
+test(com.cmcc.p.poc.automation.test.GroupUndisturbed)  Time elapsed: 147.516 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.cmcc.p.poc.automation.test.GroupUndisturbed.test(GroupUndisturbed.java:42)
+
+test(com.cmcc.p.poc.automation.test.HistotyTest)  Time elapsed: 162.462 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.cmcc.p.poc.automation.test.HistotyTest.test(HistotyTest.java:52)
+
+test(com.cmcc.p.poc.automation.test.Updatefriendname)  Time elapsed: 166.61 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.cmcc.p.poc.automation.test.Updatefriendname.test(Updatefriendname.java:57)
+

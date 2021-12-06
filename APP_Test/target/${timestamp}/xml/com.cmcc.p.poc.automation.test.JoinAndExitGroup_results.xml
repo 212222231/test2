@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="127.0.0.1"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="350.962">
+  <properties />
+  
+  
+            <testcase name="getFirst" time="0.001" classname="com.cmcc.p.poc.automation.test.JoinAndExitGroup" />
+                <testcase name="getsecond" time="0.001" classname="com.cmcc.p.poc.automation.test.JoinAndExitGroup" />
+                <testcase name="test" time="350.960" classname="com.cmcc.p.poc.automation.test.JoinAndExitGroup" />
+      
+</testsuite>

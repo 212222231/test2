@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="127.0.0.1"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="94.175">
+  <properties />
+  
+  
+            <testcase name="login" time="94.175" classname="com.cmcc.p.poc.automation.test.LoginTest" />
+                <testcase name="getFirst" time="0.000" classname="com.cmcc.p.poc.automation.test.LoginTest" />
+      
+</testsuite>

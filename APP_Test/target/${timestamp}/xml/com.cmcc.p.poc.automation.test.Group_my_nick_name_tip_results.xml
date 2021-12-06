@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="127.0.0.1"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="127.161">
+  <properties />
+  
+  
+            <testcase name="test" time="127.157" classname="com.cmcc.p.poc.automation.test.Group_my_nick_name_tip" />
+                <testcase name="getsecond" time="0.004" classname="com.cmcc.p.poc.automation.test.Group_my_nick_name_tip" />
+      
+</testsuite>
