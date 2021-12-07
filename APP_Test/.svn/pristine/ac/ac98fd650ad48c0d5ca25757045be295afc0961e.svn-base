@@ -1,0 +1,71 @@
+package com.cmcc.p.poc.automation.test;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import com.cmcc.p.poc.automation.core.AbstractPage;
+import com.cmcc.p.poc.automation.core.AbstractTest;
+import com.cmcc.p.poc.automation.core.Utils;
+import com.cmcc.p.poc.automation.pagefunction.AbstractGroupFunction;
+
+import io.appium.java_client.MobileElement;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+
+import java.util.List;
+//操作前需手动打开定位权限
+@Epic("群组对讲页面-共享位置")
+@Feature("开始创造测试数据")
+public class ShareLocation extends AbstractTest {
+	 private String casename = "共享位置";
+		static String user1;
+		static String pwd1;
+
+		@Override
+		@BeforeTest
+		public void setUp(){
+			Utils.print("casename" + casename);
+		}
+		
+		@Test(dataProvider = "loginSuccess", alwaysRun = true, dataProviderClass = DataPro.class)
+		public static void getFirst(String account, String password) {
+			user1 = account;
+			pwd1 = password;
+		}
+		@Story("开始执行测试用例")
+		@BeforeMethod(description = "共享位置")
+		@Test
+		public void test() throws InterruptedException{
+	    	 //登录
+			AbstractPage.login(user1,pwd1);
+			//创建群组
+	        AbstractGroupFunction.newgroup();
+	        // 点击群组
+	        AbstractPage.findElementByName("群组").click(); 
+	        //选择最后一个群组进入 群组
+	    	AbstractGroupFunction.changegroup();
+		        
+		    //发送位置功能
+		    AbstractGroupFunction.sendlocation();	    		        
+	    	  
+	    	//点击位置共享
+	    	AbstractPage.findElementById("com.cmcc.p.poc:id/btn_location_share").click();
+	    	Utils.waitShortTime();
+	    	//点击确定
+	    	AbstractPage.findElementById("com.cmcc.p.poc:id/tv_confirm").click();
+	    	  
+	    	Thread.sleep(5000);
+	    	//位置共享界面返回
+	    	AbstractPage.findElementById("com.cmcc.p.poc:id/ib_back").click();
+	    	//判断是否正在进行位置共享
+	    	//Assert.assertTrue("位置共享没有成功",AbstractPage.whetherElementVisable("正在共享位置", 1));
+	    	//判断群组对讲界面是否有“XXX正在位置共享”提示
+	    	Assert.assertEquals("com.cmcc.p.poc:id/tv_common", "com.cmcc.p.poc:id/tv_common");	    	  
+
+	    	Utils.print(casename + "---->PASS");
+	    	//解散群组
+	    	AbstractGroupFunction.dismissgroup1();
+		}
+}

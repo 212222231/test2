@@ -1,0 +1,194 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.cmcc</groupId>
+	<artifactId>APP_Test</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>APP_Test</name>
+	<url>http://maven.apache.org</url>
+
+	<repositories>
+		<repository>
+			<id>jcenter</id>
+			<name>bintray</name>
+			<url>https://jcenter.bintray.com</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<!-- 解决乱码的使用utf-8，最近下的代码不是 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	   	<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+		<aspectj.version>1.8.10</aspectj.version>
+	</properties>
+
+
+<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.14.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>3.14.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-dependency-plugin</artifactId>
+			<version>3.1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>6.1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.10</version>
+		</dependency>
+		
+		<!-- 依赖reportNg -->
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- 依赖Guice -->
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/dom4j/lom4j 日志输出-->
+		<dependency>
+	    	<groupId>org.dom4j</groupId>
+	    	<artifactId>dom4j</artifactId>
+	    	<version>2.1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+	
+		<dependency>
+	    	<groupId>jaxen</groupId>
+	    	<artifactId>jaxen</artifactId>
+	    	<version>1.1.6</version>
+		</dependency>
+	
+      	<dependency>
+      		<groupId>javax.mail</groupId>
+      		<artifactId>mail</artifactId>
+      		<version>1.4.7</version>
+      	</dependency>
+
+      	<dependency>
+      		<groupId>org.apache.poi</groupId>
+      		<artifactId>poi</artifactId>
+      		<version>3.17</version>
+      	</dependency>
+
+      	<dependency>
+      		<groupId>org.apache.poi</groupId>
+      		<artifactId>poi-ooxml</artifactId>
+      		<version>3.17</version>
+      	</dependency>
+      
+      	<!-- 依赖allure -->
+      	<dependency>
+        	<groupId>io.qameta.allure</groupId>
+        	<artifactId>allure-testng</artifactId>
+        	<version>2.12.0</version>
+        	<scope>test</scope>
+    	</dependency>
+</dependencies>
+	
+<build>
+    <plugins>
+    	<plugin>
+    		<groupId>org.apache.meven.plugins</groupId>
+    		<artifactId>maven-compiler-plugin</artifactId>
+    		<version>3.6.2</version>
+    		
+    		<configuration>
+    			<target>1.8</target>
+    			<source>1.8</source>
+    			<encoding>utf-8</encoding>
+    		</configuration>
+    		
+    	</plugin>
+    
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.20</version>
+            
+            <configuration>
+                <argLine>
+                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                </argLine>
+                
+                <!-- 设置html代码不转义 -->
+                <systemPropertyVariables>
+			        <org.uncommons.reportng.escape-output>false</org.uncommons.reportng.escape-output>            
+			    </systemPropertyVariables>
+                <testFailureIgnore>true</testFailureIgnore> 
+                <argLine>-Dfile.encoding=UTF-8</argLine>
+                
+                <!-- 指定要执行的测试套件 -->
+                <suiteXmlFiles>  
+                    <suiteXmlFile>mytestng.xml</suiteXmlFile>  
+                </suiteXmlFiles>    
+            </configuration>
+   
+            <dependencies>
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjweaver</artifactId>
+                    <version>${aspectj.version}</version>
+                </dependency>
+            </dependencies>
+
+        </plugin>    
+    </plugins>
+</build>	
+	
+</project>

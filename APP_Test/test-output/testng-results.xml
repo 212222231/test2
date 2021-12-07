@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="automation" duration-ms="134288" started-at="2021-11-23T08:28:07Z" finished-at="2021-11-23T08:30:21Z">
+  <suite name="Default suite" duration-ms="174222" started-at="2021-12-06T14:45:14Z" finished-at="2021-12-06T14:48:08Z">
     <groups>
     </groups>
-    <test name="127.0.0.1" duration-ms="134288" started-at="2021-11-23T08:28:07Z" finished-at="2021-11-23T08:30:21Z">
-      <class name="com.cmcc.p.poc.automation.test.SetUp">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.cmcc.p.poc.automation.test.SetUp@17579e0f]" name="setUp" is-config="true" duration-ms="15" started-at="2021-11-23T16:28:07Z" finished-at="2021-11-23T16:28:07Z">
+    <test name="Default test" duration-ms="174222" started-at="2021-12-06T14:45:14Z" finished-at="2021-12-06T14:48:08Z">
+      <class name="com.cmcc.p.poc.automation.test.SpeakAndPlay">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.cmcc.p.poc.automation.test.SpeakAndPlay@3bd40a57]" name="setUp" is-config="true" duration-ms="63" started-at="2021-12-06T22:45:14Z" finished-at="2021-12-06T22:45:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createAppiumServer()[pri:0, instance:com.cmcc.p.poc.automation.test.SetUp@17579e0f]" name="createAppiumServer" is-config="true" duration-ms="15427" started-at="2021-11-23T16:28:07Z" finished-at="2021-11-23T16:28:22Z">
+        <test-method status="PASS" signature="createAppiumServer()[pri:0, instance:com.cmcc.p.poc.automation.test.SpeakAndPlay@3bd40a57]" name="createAppiumServer" is-config="true" duration-ms="15229" started-at="2021-12-06T22:45:14Z" finished-at="2021-12-06T22:45:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAppiumServer -->
-        <test-method status="PASS" signature="getFirst(java.lang.String, java.lang.String)[pri:0, instance:com.cmcc.p.poc.automation.test.SetUp@17579e0f]" name="getFirst" duration-ms="6" started-at="2021-11-23T16:28:23Z" data-provider="loginSuccess" finished-at="2021-11-23T16:28:23Z">
+        <test-method status="PASS" signature="getFirst(java.lang.String, java.lang.String)[pri:0, instance:com.cmcc.p.poc.automation.test.SpeakAndPlay@3bd40a57]" name="getFirst" duration-ms="181" started-at="2021-12-06T22:45:30Z" data-provider="loginSuccess" finished-at="2021-12-06T22:45:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[15410000011]]>
+                <![CDATA[15410000021]]>
               </value>
             </param>
             <param index="1">
@@ -31,23 +31,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getFirst -->
-        <test-method status="PASS" signature="tearDwon()[pri:0, instance:com.cmcc.p.poc.automation.test.SetUp@17579e0f]" name="tearDwon" is-config="true" duration-ms="0" started-at="2021-11-23T16:28:23Z" finished-at="2021-11-23T16:28:23Z">
+        <test-method status="PASS" signature="tearDwon()[pri:0, instance:com.cmcc.p.poc.automation.test.SpeakAndPlay@3bd40a57]" name="tearDwon" is-config="true" duration-ms="17" started-at="2021-12-06T22:45:30Z" finished-at="2021-12-06T22:45:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDwon -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.cmcc.p.poc.automation.test.SetUp@17579e0f]" name="test" duration-ms="117686" started-at="2021-11-23T16:28:23Z" finished-at="2021-11-23T16:30:20Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.cmcc.p.poc.automation.test.SpeakAndPlay@3bd40a57]" name="test" duration-ms="157595" started-at="2021-12-06T22:45:30Z" finished-at="2021-12-06T22:48:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="tearDwon()[pri:0, instance:com.cmcc.p.poc.automation.test.SetUp@17579e0f]" name="tearDwon" is-config="true" duration-ms="0" started-at="2021-11-23T16:30:20Z" finished-at="2021-11-23T16:30:20Z">
+        <test-method status="PASS" signature="tearDwon()[pri:0, instance:com.cmcc.p.poc.automation.test.SpeakAndPlay@3bd40a57]" name="tearDwon" is-config="true" duration-ms="3" started-at="2021-12-06T22:48:08Z" finished-at="2021-12-06T22:48:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDwon -->
-        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.cmcc.p.poc.automation.test.SetUp@17579e0f]" name="tearDownAfter" is-config="true" duration-ms="732" started-at="2021-11-23T16:30:20Z" finished-at="2021-11-23T16:30:21Z">
+        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.cmcc.p.poc.automation.test.SpeakAndPlay@3bd40a57]" name="tearDownAfter" is-config="true" duration-ms="313" started-at="2021-12-06T22:48:08Z" finished-at="2021-12-06T22:48:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfter -->
-      </class> <!-- com.cmcc.p.poc.automation.test.SetUp -->
-    </test> <!-- 127.0.0.1 -->
-  </suite> <!-- automation -->
+      </class> <!-- com.cmcc.p.poc.automation.test.SpeakAndPlay -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
