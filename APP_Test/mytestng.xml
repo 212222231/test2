@@ -8,15 +8,7 @@
     <test name="测试用例总文件">
         <classes>
        	 <!--
-         	<class name="com.cmcc.p.poc.automation.test.Set_manager_member"/>
-         	<class name="com.cmcc.p.poc.automation.test.ShareLocation"/>
-         	<class name="com.cmcc.p.poc.automation.test.SpeakAndPlay"/>
-         	<class name="com.cmcc.p.poc.automation.test.TopGroup"/>
-         	<class name="com.cmcc.p.poc.automation.test.Updatefriendfail"/>
-            <class name="com.cmcc.p.poc.automation.test.Updatefriendname"/> 
-         
-           -->
-          	<class name="com.cmcc.p.poc.automation.test.AddAndRemoveMember"/>
+         	<class name="com.cmcc.p.poc.automation.test.AddAndRemoveMember"/>
             <class name="com.cmcc.p.poc.automation.test.Addfriend"/>
             <class name="com.cmcc.p.poc.automation.test.Callfriend"/>
             <class name="com.cmcc.p.poc.automation.test.Callonefriend"/>
@@ -49,6 +41,10 @@
             <class name="com.cmcc.p.poc.automation.test.TopGroup"/>
             <class name="com.cmcc.p.poc.automation.test.Updatefriendfail"/>
             <class name="com.cmcc.p.poc.automation.test.Updatefriendname"/>  
+         
+           -->
+            <class name="com.cmcc.p.poc.automation.test.Addfriend"/>
+            
             
         </classes>
     </test>
