@@ -57,8 +57,8 @@ public class EmailTest {
 			protected PasswordAuthentication getPasswordAuthentication() {
                         // 第二个参数，就是我QQ开启smtp的授权码
 			//return new PasswordAuthentication("1697283524@qq.com","tylradogwdlqcbda");
-			//return new PasswordAuthentication("1514743177@qq.com","vwcvjckszcmijaii");
-			return new PasswordAuthentication("1359911970@qq.com","okervmhflevkhhje");
+			return new PasswordAuthentication("1514743177@qq.com","vwcvjckszcmijaii");
+			//return new PasswordAuthentication("1359911970@qq.com","okervmhflevkhhje");
 			}
  
 		});
@@ -70,14 +70,14 @@ public class EmailTest {
  
 			// 设置发件人邮箱地址
 			// message.setFrom(new InternetAddress("1697283524@qq.com"));
-			//message.setFrom(new InternetAddress("1514743177@qq.com"));
-			message.setFrom(new InternetAddress("1359911970@qq.com"));
+			message.setFrom(new InternetAddress("1514743177@qq.com"));
+			//message.setFrom(new InternetAddress("1359911970@qq.com"));
 			
 			// 设置收件人邮箱地址
 			// message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("1697283524@qq.com"));
 			//message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("1514743177@qq.com"));
 			//message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("1359911970@qq.com"));
-			message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("tianshichuan@shanlitech.com"));
+			message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("mengyao@shanlitech.com"));
             // 设置邮件主题
 			message.setSubject("自动化测试完成-发送测试报告，请查收");
  
